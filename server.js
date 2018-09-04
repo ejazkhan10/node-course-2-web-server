@@ -46,6 +46,13 @@ app.get("/about", (req, res) => {
   });
 });
 
+app.get("/projects", (req, res) => {
+  res.render("projects.hbs", {
+    pageTitle: "Projects Page",
+    portfolio: "Our portfolio"
+  });
+});
+
 app.get("/bad", (req, res) => {
   res.send({
     bad: "Unable to resolve request"
